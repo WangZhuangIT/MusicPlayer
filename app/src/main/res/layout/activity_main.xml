@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/background"
+    tools:context=".activity.MainActivity">
+
+    <ListView
+        android:id="@+id/listView_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_nowDuration"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="00:00"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textView_duration"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:text="00:00"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_shunxu"
+            android:layout_width="@dimen/many_pic"
+            android:layout_height="@dimen/many_pic"
+            android:background="@mipmap/shunxu_shunxu"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf= "@+id/button_left"/>
+
+        <Button
+            android:id="@+id/button_left"
+            android:layout_width="@dimen/many_pic"
+            android:layout_height="@dimen/many_pic"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_play"
+            android:background="@mipmap/left_pic" />
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="@dimen/play_pic"
+            android:layout_height="@dimen/play_pic"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/pause_pic" />
+
+        <Button
+            android:id="@+id/button_right"
+            android:layout_width="@dimen/many_pic"
+            android:layout_height="@dimen/many_pic"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/button_play"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/right_pic" />
+
+        <Button
+            android:layout_width="@dimen/many_pic"
+            android:layout_height="@dimen/many_pic"
+            android:background="@mipmap/list_music_pic"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/button_right"/>
+    </RelativeLayout>
+
+</LinearLayout>
